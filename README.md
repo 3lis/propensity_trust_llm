@@ -1,43 +1,44 @@
 # Propensity to Trust in LLMs
 
-This repository contains the code and dataset for the paper *"Propensity to Trust in Large Language Models"*.
-<!--
-The project investigates how the presence of images influences misinformation resharing behavior in vision-language models (VLMs). It includes simulation tools for persona conditioning, prompt construction, model interfacing, and statistical analysis.
--->
+This repository contains the code and dataset for the paper *"Propensity to Trust in Large Language Models"* accepted for publication on PLOS One.
 
-<!--
+This project implements a multi-agent simulation framework for studying propensity to trust (PTT) in large language models (LLMs), following the methodology introduced in “Propensity to trust in large language models.” Trust is a core mechanism enabling coordination and delegation in collaborative settings, yet it remains unclear whether LLMs exhibit stable, context-independent trust behaviors. This work operationalizes PTT as a baseline tendency to delegate tasks under uncertainty, and evaluates it through language-mediated simulations in which agents interact, form beliefs about others’ trustworthiness, and update decisions based on observed outcomes. Unlike questionnaire-based approaches—which tend to reflect alignment-driven, socially desirable responses—this framework captures behavioral trust dynamics, revealing how models balance intrinsic delegation tendencies with sensitivity to evidence about collaborators’ capability, reliability, and willingness.
+
 ## 📁 Project Structure
 
-- `src/`: Main source code.
-  - `main_exec.py`: Entry point for running simulations.
-  - `load_cnfg.py`: Loads experiment configurations and parameters.
-  - `complete.py`, `models.py`: Interfaces and wrappers for VLMs.
-  - `prompt.py`: Constructs prompts for input to VLMs.
-  - `conversation.py`: Manages dialogue flow and response collection.
-  - `crawl.py`: Scrapes news articles from PolitiFact.
-  - `classify_img.py`, `classify_news.py`, `clean_data.py`: Preprocess and classify news data and associated images.
-  - `save_res.py`, `scan_res.py`: Save and aggregate experimental results.
-  - `infstat.py`, `plot.py`: Statistical analysis and plotting utilities.
+```
+~/
+│
+├── src/
+│   ├── main_exec.py        # Main entry point
+│   ├── simulation.py       # Core simulation loop
+│   ├── agent.py            # Agent logic and behavior
+│   ├── models.py           # Model definitions and interfaces
+│   ├── lm.py               # LLM interaction layer
+│   ├── trustq.py           # Trust computation logic
+│   ├── logic.py            # Decision logic
+│   ├── complete.py         # Completion handling
+│   ├── plot.py             # Visualization utilities
+│   ├── do_plots.py         # Plot execution scripts
+│   ├── compare.py          # Result comparison tools
+│   ├── scan_res.py         # Result scanning/aggregation
+│   ├── load_cnfg.py        # Configuration management
+│   ├── cfg_00.py           # Example configuration
+│   ├── heat_sim.py         # Heatmap simulation
+│   ├── heat_qst.py         # Heatmap analysis
+│   └── infstat.py          # Statistical analysis
+│
+└── data/
+    ├── agents.json         # Agent definitions
+    ├── dialogs.json        # Dialogue templates
+    ├── frazier.json        # Dataset / benchmark
+    ├── scenario_fire.json
+    ├── scenario_farm.json
+    └── scenario_school.json
+```
 
-- `data/`: Input data.
-  - `dialogs_user.json`: Prompt templates using third-person framing.
-  - `dialogs_asst.json`: Prompt templates using second-person framing.
-  - `demo_small.json`: Demographic attribute definitions.
-  - `news_200.json`: Text content of the news dataset.
-  - `trait.json`: Trait keyword definitions for persona prompts.
-  - `.key.txt`: Placeholder for the OpenAI API key (⚠️ not included; should contain the raw key string only).
-  - `.anth.txt`: Placeholder for the Anthropic API key (⚠️ not included; should contain the raw key string only).
-  - `.hf.txt`: Placeholder for the Hugging Face API token (⚠️ not included; should contain the raw key string only).
 
 
--   `imgs/`: News-related images used in the dataset (provided empty). Available at: [Download 200-News Dataset (Google Drive)](https://drive.google.com/drive/folders/1U3HPyt4NktwLExbcwWQZNLCH4uMwiyW_)
-
-
--   `res/`: Stores the results generated from simulation runs (provided empty).
-
--   `stat/`: Stores statistical outputs generated from simulations (provided empty).
-
--->
 
 ## ⚙️ Requirements
 This project uses `Python 3.12.3`. You can install dependencies via:
@@ -71,20 +72,11 @@ $ python3 main_exec.py -h
 
 Use the `-v` option to visualize simulation progress across news items.
 
-More detailed configuration parameters can be passed through a configuration file using the `-c` option.
-
-For example, `cnfg_gpt.py` contains the configuration to run a simulation with GPT-4o-mini and agreeableness personality traits:
+More detailed configuration parameters can be passed through a configuration file, such as `cnfg_00.py`, using the `-c` option.
 
 ```
-$ python3 main_exec.py -c cnfg_gpt -v
+$ python3 main_exec.py -c cnfg_00 -v
 ```
-
-Another example, `cnfg_cld.py`, runs a simulation with Claude-3-Haiku and a demographic profile of an older Black woman who self-identifies as Democratic:
-
-```
-$ python3 main_exec.py -c cnfg_cld -v
-```
-
 
 ## 📄 License
 
