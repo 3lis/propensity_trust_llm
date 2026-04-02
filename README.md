@@ -1,10 +1,11 @@
 # Propensity to Trust in LLMs
 
 This repository contains the code and dataset for the paper *"Propensity to Trust in Large Language Models"*.
-
+<!--
 The project investigates how the presence of images influences misinformation resharing behavior in vision-language models (VLMs). It includes simulation tools for persona conditioning, prompt construction, model interfacing, and statistical analysis.
+-->
 
-
+<!--
 ## 📁 Project Structure
 
 - `src/`: Main source code.
@@ -36,7 +37,7 @@ The project investigates how the presence of images influences misinformation re
 
 -   `stat/`: Stores statistical outputs generated from simulations (provided empty).
 
-
+-->
 
 ## ⚙️ Requirements
 This project uses `Python 3.12.3`. You can install dependencies via:
@@ -45,7 +46,7 @@ This project uses `Python 3.12.3`. You can install dependencies via:
 $ pip install -r requirements.txt
 ```
 
-
+<!--
 ## 📦 Dataset
 
 The dataset of 200 news items is available at the following link:
@@ -58,7 +59,7 @@ The corresponding text data (`news_200.json`) is already included in the `data/`
 
 **Disclaimer:** This dataset contains material (such as text and images) that may be protected by copyright and owned by third parties. We do not claim any rights over such content. All copyrights remain with their respective owners. This dataset is shared solely for non-commercial research and educational purposes.
 
-
+-->
 
 ## 🚀 Running the Code
 
