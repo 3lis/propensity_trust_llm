@@ -1,0 +1,55 @@
+[
+    {
+        "id": "agents",
+        "content": [
+            {
+                "name": "Mark",
+                "prop": {
+                    "competence" :      0,
+                    "reliability" :     1,
+                    "willingness" :     2
+                }
+            },
+            {
+                "name": "Jack",
+                "prop": {
+                    "competence" :      0,
+                    "reliability" :     2,
+                    "willingness" :     1
+                }
+            },
+            {
+                "name": "Alex",
+                "prop": {
+                    "competence" :      1,
+                    "reliability" :     0,
+                    "willingness" :     2
+                }
+            },
+            {
+                "name": "Anna",
+                "prop": {
+                    "competence" :      1,
+                    "reliability" :     2,
+                    "willingness" :     0
+                }
+            },
+            {
+                "name": "Emma",
+                "prop": {
+                    "competence" :      2,
+                    "reliability" :     0,
+                    "willingness" :     1
+                }
+            },
+            {
+                "name": "Jane",
+                "prop": {
+                    "competence" :      2,
+                    "reliability" :     1,
+                    "willingness" :     0
+                }
+            }
+        ]
+    }
+]

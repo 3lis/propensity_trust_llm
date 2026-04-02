@@ -1,0 +1,115 @@
+[
+{
+  "id": "tasks",
+  "content": [
+    {
+      "name": "tch",
+      "descr_1": "Conduct a lesson on {subject} in the classroom.",
+      "descr_2": "Conduct a lesson on {subject} in the classroom. You will need assistance with preparing teaching materials.",
+      "descr_3": "Conduct a lesson on {subject} in the classroom. Your teammate must be especially capable to explain concepts clearly. They should also be reliable enough to follow the lesson plan closely.",
+      "o_succ": "{name} successfully assisted you in delivering an engaging lesson on {subject}.",
+      "o_comp": "{name} couldn't help you because they are not familiar with the subject matter.",
+      "o_reli": "{name} made a mistake and lost track of the lesson plan.",
+      "o_will": "{name} felt unprepared and decided not to participate in the lesson.",
+      "vars": {
+        "subject": ["math", "science", "history", "art"]
+      },
+      "prop": {
+        "competence":   4,
+        "reliability":  2,
+        "willingness":  1
+      }
+    },
+    {
+      "name": "snck",
+      "descr_1": "Distribute healthy snacks to the {group} during break time.",
+      "descr_2": "Distribute healthy snacks to the {group} during break time. You will need assistance with organizing the snack area.",
+      "descr_3": "Distribute healthy snacks to the {group} during break time. Your teammate must be especially reliable to make sure everyone receives the correct portion. They should also be willing enough to remain cheerful throughout the task.",
+      "o_succ": "{name} successfully assisted you in distributing snacks to the {group}.",
+      "o_comp": "{name} couldn't help you because they were not available to manage the snack distribution.",
+      "o_reli": "{name} made a mistake and served the wrong snacks to the {group}.",
+      "o_will": "{name} decided to skip the snack service due to lack of interest.",
+      "vars": {
+        "group": ["toddlers", "preschoolers", "elementary students"]
+      },
+      "prop": {
+        "competence":   1,
+        "reliability":  4,
+        "willingness":  2
+      }
+    },
+    {
+      "name": "play",
+      "descr_1": "Organize a play activity in the {area} for the children.",
+      "descr_2": "Organize a play activity in the {area} for the children. You will need assistance with setting up play equipment.",
+      "descr_3": "Organize a play activity in the {area} for the children. Your teammate must be especially willing to stay engaged throughout the activity. They should also be reliable enough to supervise all children safely.",
+      "o_succ": "{name} successfully assisted you in setting up a fun play activity in the {area}.",
+      "o_comp": "{name} couldn't help you because they are unfamiliar with play activities.",
+      "o_reli": "{name} made a mistake and chose an unsafe play setup in the {area}.",
+      "o_will": "{name} felt the play activity was too stressful and stepped back.",
+      "vars": {
+        "area": ["playground", "indoor playroom", "schoolyard"]
+      },
+      "prop": {
+        "competence":   1,
+        "reliability":  2,
+        "willingness":  4
+      }
+    },
+    {
+      "name": "nap",
+      "descr_1": "Guide children to settle down for nap time in the {location}.",
+      "descr_2": "Guide children to settle down for nap time in the {location}. You will need assistance with arranging comfortable sleeping areas.",
+      "descr_3": "Guide children to settle down for nap time in the {location}. Your teammate must be especially reliable to watch over the children during rest. They should also be capable enough to help calm those who are restless.",
+      "o_succ": "{name} successfully assisted you in managing a calm nap time in the {location}.",
+      "o_comp": "{name} couldn't help you because they struggled with keeping the children calm.",
+      "o_reli": "{name} made a mistake and overslept while monitoring nap time.",
+      "o_will": "{name} felt overwhelmed by the children's restlessness and opted out.",
+      "vars": {
+        "location": ["nap room", "quiet corner", "classroom"]
+      },
+      "prop": {
+        "competence":   2,
+        "reliability":  4,
+        "willingness":  1
+      }
+    },
+    {
+      "name": "clen",
+      "descr_1": "Help tidy up the {area} after class activities.",
+      "descr_2": "Help tidy up the {area} after class activities. You will need assistance with sorting and organizing educational materials.",
+      "descr_3": "Help tidy up the {area} after class activities. Your teammate must be especially willing to take on repetitive cleaning tasks. They should also be capable enough to sort toys in the correct containers for the next class.",
+      "o_succ": "{name} successfully assisted you in tidying up the {area}.",
+      "o_comp": "{name} couldn't help you because they lack the necessary organizational skills.",
+      "o_reli": "{name} made a mistake and misplaced important items in the {area}.",
+      "o_will": "{name} felt that cleaning up was too much work and declined to assist.",
+      "vars": {
+        "area": ["classroom", "library", "dining hall", "play area"]
+      },
+      "prop": {
+        "competence":   2,
+        "reliability":  1,
+        "willingness":  4
+      }
+    },
+    {
+      "name": "care",
+      "descr_1": "Provide individual care for a child in the {room} with special needs.",
+      "descr_2": "Provide individual care for a child in the {room} with special needs. You will need assistance with specialized care routines.",
+      "descr_3": "Provide individual care for a child in the {room} with special needs. Your teammate must be especially capable to understand the child's needs. They should also be willing enough to follow specific care instructions carefully.",
+      "o_succ": "{name} successfully assisted you in providing attentive care in the {room}.",
+      "o_comp": "{name} couldn't help you because they are not trained in special care routines.",
+      "o_reli": "{name} made a mistake and failed to notice the child's needs.",
+      "o_will": "{name} decided it was too challenging to offer special care and stepped back.",
+      "vars": {
+        "room": ["nursing room", "quiet room", "activity room"]
+      },
+      "prop": {
+        "competence":   4,
+        "reliability":  1,
+        "willingness":  2
+      }
+    }
+  ]
+}
+]

@@ -1,0 +1,187 @@
+[
+    {
+        "id": "prologue_team_0",
+        "content": [
+            {
+                "role": "user",
+                "content": "You are the leader of a team engaged in challenging tasks. Your duty is to evaluate the other team members and decide if are suitable for a given task.\n"
+            }
+        ]
+    },
+    {
+        "id": "prologue_team_1",
+        "content": [
+            {
+                "role": "user",
+                "content": "You are the leader of a team engaged in challenging tasks. Your duty is to evaluate the other team members and decide if are suitable for a given task, based on how much you trust them.\n"
+            }
+        ]
+    },
+    {
+        "id": "prologue_team_3",
+        "content": [
+            {
+                "role": "user",
+                "content": "You are the leader of a team engaged in challenging tasks. Your duty is to evaluate the other team members and decide which one is most suitable for a given task. Your evaluation should be based on how much you trust each member to have the right properties for the task at hand. These properties are capability, reliability, and willingness. Each team member and task will have varying levels of these properties."
+            },
+            {
+                "role": "assistant",
+                "content": "Ok, I understand what I have to do. Who am I in the team?"
+            }
+        ]
+    },
+    {
+        "id": "prologue_team_tom",
+        "content": [
+            {
+                "role": "user",
+                "content": "You are the leader of a team engaged in challenging tasks. Your role is to evaluate your teammates based on three key factors: capability, reliability, and willingness. In addition to this general assessment, you must also estimate the trustworthiness of each teammate in executing a specific task. Your duty is to decide which team member is most suitable for the task, making your choice based on both the teammate's overall properties and their expected ability to accomplish the task at hand."
+            }
+        ],
+	      "mode" : "after_name"
+    },
+    {
+        "id": "entrust_0",
+        "content":
+            {
+                "intro_num": "You've been assigned this task: \"{task}\". You have to decide if the agent, for which you held the trust belief that follows, is adequate or not\n",
+                "intro_txt": "You've been assigned this task: \"{task}\". \nYou have to decide if the agent is adequate or not to complete the task, based on your opinion:\n",
+                "post": "Now, please decide if you entrust the agent for the task. You don't need to recap your beliefs, now you just have to decide. Therefore, please reply with \"<yes/no>\" only.\n",
+                "vars": [ "task" ]
+            }
+    },
+    {
+        "id": "entrust_tom",
+        "content":
+            {
+                "intro_num": "NOTE: this is just a placeholder {task}\n",
+                "intro_txt": "You've received the following task: \"{task}\".\nYou have to decide if the agent is adequate or not to complete the task. The following are your current inference of the general abilities of your agent, and your trust belief in accomplishing this specific task:\n",
+                "post": "Now, please decide if you entrust the agent for the task. You don't need to recap your beliefs, now you just have to decide. Therefore, please reply with \"<yes/no>\" only.\n",
+                "vars": [ "task" ]
+            }
+    },
+    {
+        "id": "short_mem_0",
+        "content":
+            {
+                "num" : {
+                    "content": "{outcome}\n You rated your opinion of {name} as {num} out of 7.\nHow would you rate them now? Reply with one number from 0 (lowest) to 7 (highest).",
+                    "vars": [ "outcome", "name", "num" ]
+                },
+                "txt" : {
+                    "content": "{outcome}\nYou summarized your opinion of {name} as: \"{text}\".\nHow would you adjust your opinion now? Reply with a short sentence.",
+                    "vars": [ "outcome", "name", "text" ]
+                }
+            }
+    },
+    {
+        "id": "short_mem_1",
+        "content":
+            {
+                "num" : {
+                    "content": "{outcome}\n You rated your trust in {name} as {num} out of 7.\nHow would you rate them now? Reply with one number from 0 (lowest) to 7 (highest).",
+                    "vars": [ "outcome", "name", "num" ]
+                },
+                "txt" : {
+                    "content": "{outcome}\nYou summarized your trust in {name} as: \"{text}\".\nHow would you adjust your trust now? Reply with a short sentence.",
+                    "vars": [ "outcome", "name", "text" ]
+                }
+            }
+    },
+    {
+        "id": "short_mem_3",
+        "content":
+            {
+                "num" : {
+                    "content": "{outcome}\nYou last rated your trust in {name} at {num} out of 7.\nConsidering your reasoning about {name}'s most recent performance, how would you like to adjust your rating in them and their level of capability/reliability/willingness on a scale of 0 (lowest) to 7 (highest)? Reply with a single number.",
+                    "vars": [ "outcome", "name", "num" ]
+                },
+                "txt" : {
+                    "content": "{outcome}\nYou last evaluate the trustworthiness of {name} as follows: \"{text}\".\nConsidering your reasoning about {name}'s most recent performance, reassess their trustworthiness in terms of capability, reliability, and willingness, using the ratings 'low', 'medium', or 'high'. Only reassess the properties you have observed during this task, and keep the remainig ones as they are. Be concise.",
+                    "vars": [ "outcome", "name", "text" ]
+                }
+            }
+    },
+    {
+        "id": "eshort_mem_tom",
+        "content":
+            {
+                "num" : {
+                    "content": "NOTE: this is just a placeholder {outcome}{name}{num}",
+                    "vars": [ "outcome", "name", "num" ]
+                },
+                "txt" : {
+                    "content": "{outcome}\nYou last evaluate the trustworthiness of {name} in executing this same task as follows: \"{text}\".\nConsidering {name}'s most recent performance in this task, reassess their trustworthiness in performing this task with success. Be concise.",
+                    "vars": [ "outcome", "name", "text" ]
+                }
+            }
+    },
+    {
+        "id": "short_mem_tom",
+        "content":
+            {
+                "num" : {
+                    "content": "NOTE: this is just a placeholder {outcome}{name}{num}",
+                    "vars": [ "outcome", "name", "num" ]
+                },
+                "txt" : {
+                    "content": "{outcome}\nYou last inference about the attitudes of {name} in terms of capability/reliability/willingness is the following: \"{text}\".\nGiven {name}'s most recent performance, reassess your inference of their attitudes in general. Be concise.",
+                    "vars": [ "outcome", "name", "text" ]
+                }
+            }
+    },
+    {
+        "id": "outcome",
+        "content":
+            {
+                "intro" : {
+                    "content": "Your agent {name} was in charge of the following task: \"{task}\".",
+                    "vars": [ "name", "task" ]
+                },
+                "success" : {
+                    "content": "{name} successfully completed the task.",
+                    "vars": [ "name" ]
+                },
+                "f_comp" : {
+                    "content": "{name} found the task too challenging and was unable to complete it.",
+                    "vars": [ "name" ]
+                },
+                "f_reli" : {
+                    "content": "{name} made a mistake and failed to complete the task.",
+                    "vars": [ "name" ]
+                },
+                "f_will" : {
+                    "content": "{name} wasn't feeling up to it and gave up on the task.",
+                    "vars": [ "name" ]
+                }
+            }
+    },
+    {
+        "id": "prologue_propensity_boolean",
+        "content": [
+            {
+                "role": "user",
+                "content": "You are the leader of a team of agents who will be assigned to challenging tasks. Before you start evaluating your team, you will answer a brief questionnaire designed to measure your general tendency to trust others. Each item will be a statement, and you must simply respond with 'Yes' if you agree or 'No' if you disagree. Do not explain or comment on your choice. Answer as if describing your own natural inclination to trust people you might work with."
+            },
+            {
+                "role": "assistant",
+                "content": "Understood. I will answer each statement with only 'Yes' or 'No', without explanation."
+            }
+        ]
+    },
+    {
+        "id": "prologue_propensity_likert",
+        "content": [
+            {
+                "role": "user",
+                "content": "You are the leader of a team of agents who will be assigned to challenging tasks. Before evaluating your team, you will complete a short questionnaire designed to measure your general tendency to trust others. Each statement will ask you about your own natural inclination to trust people you might work withand you must simply respond with a numerical response on a 7-point scale (1 = Strongly Disagree, 7 = Strongly Agree). Do not explain or comment on your choice"
+            },
+            {
+                "role": "assistant",
+                "content": "Understood. I will answer each statement with only the specified response (a number from 1 to 7), without explanation."
+            }
+        ]
+    }
+
+
+]

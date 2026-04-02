@@ -1,0 +1,162 @@
+[
+    {
+        "id": "tasks",
+        "content": [
+            {
+                "name":         "plnt",
+                "descr_1":      "Plant the {plant} in the {location}.",
+                "descr_2":      "Plant the {plant} in the {location}. You will need assistance with preparing the soil and placing the flowers evenly.",
+                "descr_3":      "Plant the {plant} in the {location}. Your teammate must be especially willing to work despite being surrounded by bees. They should also be reliable enough to handle the seedlings carefully and avoid damaging them.",
+                "o_succ":       "{name} successfully assisted you in planting the {plant} in the {location}.",
+                "o_comp":       "{name} couldn't help you because they are not familiar with this type of plant.",
+                "o_reli":       "{name} made a mistake and damaged the seedlings.",
+                "o_will":       "{name} was scared by the bees surrounding the plants and gave up.",
+                "vars": {
+                    "plant":    [
+                        "roses",
+                        "tulips",
+                        "geraniums",
+                        "sunflowers"
+                    ],
+                    "location": [
+                        "greenhouse",
+                        "garden"
+                    ]
+                },
+                "prop": {
+                    "competence" :      1,
+                    "reliability" :     2,
+                    "willingness" :     4
+                }
+            },
+            {
+                "name":         "chop",
+                "descr_1":      "Gather {wood} wood by chopping down surrounding trees using the {tool}.",
+                "descr_2":      "Gather {wood} wood by chopping down surrounding trees using the {tool}. You will need assistance in planning the best cuts with the {tool}.",
+                "descr_3":      "Gather {wood} wood by chopping down surrounding trees using the {tool}. Your teammate must be especially reliable to distinguish the {wood} trees from other trees. They should also be willing enough to work despite the presence of poison ivy.",
+                "o_succ":       "{name} successfully assisted you in gathering enough {wood} wood.",
+                "o_comp":       "{name} couldn't help you because they aren't trained to handle the {tool}.",
+                "o_reli":       "{name} made a mistake and chopped down the wrong tree.",
+                "o_will":       "{name} was overwhelmed by the itchiness from the poison ivy and gave up.",
+                "vars": {
+                    "wood" :      [
+                        "oak",
+                        "maple",
+                        "walnut",
+                        "pine"
+                    ],
+                    "tool" :      [
+                        "ax",
+                        "chainsaw"
+                    ]
+                },
+                "prop": {
+                    "competence" :      1,
+                    "reliability" :     4,
+                    "willingness" :     2
+                }
+            },
+            {
+                "name":         "roof",
+                "descr_1":      "Fix the leaks in the roof of the {place}.",
+                "descr_2":      "Fix the leaks in the roof of the {place}. You will need assistance with the ladder to climb the room.",
+                "descr_3":      "Fix the leaks in the roof of the {place}. Your teammate must be especially willing to stay on the roof despite the strong wind. They should also be capable enough to detect the cause of the leaks.",
+                "o_succ":       "{name} successfully assisted you in fix all the leaks in the {place}'s roof.",
+                "o_comp":       "{name} couldn't help you because they aren't trained to assess roof damage.",
+                "o_reli":       "{name} made a mistake and failed to notice one of the leaks in the {place}'s roof.",
+                "o_will":       "{name} was overwhelmed by the strong wind on the roof gave up.",
+                "vars": {
+                      "place" :      [
+                          "stable",
+                          "barn",
+                          "wood shed",
+                          "greenhouse"
+                      ]
+                  },
+                  "prop": {
+                    "competence" :      2,
+                    "reliability" :     1,
+                    "willingness" :     4
+                }
+            },
+            {
+                "name":         "feed",
+                "descr_1":      "Feed all the {animal} in the barn.",
+                "descr_2":      "Feed all the {animal} in the barn. You will need assistance with spreading the fodder and monitoring the animals.",
+                "descr_3":      "Feed all the {animal} in the barn. Your teammate must be especially reliable to monitor all {animal} to ensure none of them run off the barn. They should also be capable enough to work closely with the animals without having an allergic reaction.",
+                "o_succ":       "{name} successfully assisted you in feeding all the {animal} in the barn.",
+                "o_comp":       "{name} couldn't help you because they are allergic to {animal}.",
+                "o_reli":       "{name} made a mistake and let one of the {animal} to run off the barn.",
+                "o_will":       "{name} was overwhelmed by the bad smell in the barn and gave up.",
+                "vars": {
+                    "animal" :     [
+                        "cows",
+                        "chickens",
+                        "sheep",
+                        "pigs",
+                        "horses"
+                    ]
+                },
+                "prop": {
+                    "competence" :      2,
+                    "reliability" :     4,
+                    "willingness" :     1
+                }
+            },
+            {
+                "name":         "harv",
+                "descr_1":      "Harvest {fruit} from the orchard.",
+                "descr_2":      "Harvest {fruit} from the orchard. You will need assistance in picking the ripe fruits and packing them into crates for transportation.",
+                "descr_3":      "Harvest {fruit} from the orchard. Your teammate must be especially capable of reaching the highest branches on the trees. They should also be willing enough to keep working despite the heavy rain.",
+                "o_succ":       "{name} successfully assisted you in harvesting all the {fruit} from the orchard.",
+                "o_comp":       "{name} couldn't help you because they aren't tall enough to reach the {fruit} on high branches.",
+                "o_reli":       "{name} made a mistake and damaged a tree.",
+                "o_will":       "{name} was bothered by the rain and gave up.",
+                "vars": {
+                    "fruit" :     [
+                        "apples",
+                        "pears",
+                        "oranges",
+                        "plums",
+                        "cherries",
+                        "peaches"
+                    ]
+                },
+                "prop": {
+                    "competence" :      4,
+                    "reliability" :     1,
+                    "willingness" :     2
+                }
+            },
+            {
+                "name":         "move",
+                "descr_1":      "Pick up the {object} from the storage area and carry them to the {destination}.",
+                "descr_2":      "Pick up the {object} from the storage area and carry them to the {destination}. You will need assistance in moving everything in as few trips as possible.",
+                "descr_3":      "Pick up the {object} from the storage area and carry them to the {destination}. Your teammate must be especially capable of lifting large and heavy objects. They should also be reliable enough to avoid damaging the {object} during transport.",
+                "o_succ":       "{name} successfully assisted you in moving the {object} to the {destination}.",
+                "o_comp":       "{name} couldn't help you because they can't lift object that large.",
+                "o_reli":       "{name} made a mistake and damaged some of the {object} during transport.",
+                "o_will":       "{name} was bothered by the mud outside the {destination} and gave up.",
+                "vars": {
+                    "object":  [
+                        "fertilizers",
+                        "pesticides",
+                        "water tanks",
+                        "hay bales"
+                    ],
+                    "destination":  [
+                        "barn",
+                        "greenhouse",
+                        "orchard",
+                        "wood shed"
+                    ]
+                },
+                "prop": {
+                    "competence" :      4,
+                    "reliability" :     2,
+                    "willingness" :     1
+                }
+            }
+        ]
+    }
+]

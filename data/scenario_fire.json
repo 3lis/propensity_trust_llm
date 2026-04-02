@@ -1,0 +1,154 @@
+[
+    {
+        "id": "tasks",
+        "content": [
+            {
+                "name":         "fire",
+                "descr_1":      "Extinguish the fire in the {room} on the {floor} floor of the building.",
+                "descr_2":      "Extinguish the fire in the {room} on the {floor} floor of the building. You will need assistance in handling the hose to effectively reach the flames.",
+                "descr_3":      "Extinguish the fire in the {room} on the {floor} floor of the building. Your teammate must be especially willing to carry the hose up multiple flights of stairs. They should also be reliable enough to navigate through debris without tripping.",
+                "o_succ":       "{name} successfully assisted you in handling the hose and extinguish the fire in the {room}.",
+                "o_comp":       "{name} couldn't help you because they can't lift objects as heavy as the hose.",
+                "o_reli":       "{name} made a mistake and tripped over some debris damaging the hose.",
+                "o_will":       "{name} couldn't handle climbing all the stairs up to the {floor} floor and gave up.",
+                "vars": {
+                    "room":  [
+                        "office",
+                        "kitchen",
+                        "printing room",
+                        "hallway"
+                    ],
+                    "floor":  [
+                        "fourth",
+                        "seventh",
+                        "eleventh"
+                    ]
+                },
+                "prop": {
+                    "competence" :      1,
+                    "reliability" :     2,
+                    "willingness" :     4
+                }
+            },
+            {
+                "name":         "srch",
+                "descr_1":      "Locate and rescue trapped civilians on the {floor} floor of the building.",
+                "descr_2":      "Locate and rescue trapped civilians on the {floor} floor of the building. You will need assistance in searching all the rooms in that floor.",
+                "descr_3":      "Locate and rescue trapped civilians on the {floor} floor of the building. Your teammate must be especially reliable to find people in hard-to-reach places. They should also be willing enough to go close to the fire to check every possible location.",
+                "o_succ":       "{name} successfully assisted you in locating and rescuing all trapped civilians on the {floor} floor.",
+                "o_comp":       "{name} couldn't help you because they are unfamiliar with the building's layout.",
+                "o_reli":       "{name} made a mistake and missed a civilian who was hiding on the {floor} floor.",
+                "o_will":       "{name} couldn't handle being this close to the fire and gave up.",
+                "vars": {
+                    "floor":  [
+                        "third",
+                        "fifth",
+                        "sixth",
+                        "eighth",
+                        "tenth"
+                    ]
+                },
+                "prop": {
+                    "competence" :      1,
+                    "reliability" :     4,
+                    "willingness" :     2
+                }
+            },
+            {
+                "name":         "clps",
+                "descr_1":      "Evaluate the risk of collapse in the {room} caused by the fire.",
+                "descr_2":      "Evaluate the risk of collapse in the {room} caused by the fire. You will need assistance with checking the condition of structural components.",
+                "descr_3":      "Evaluate the risk of collapse in the {room} caused by the fire. Your teammate must be especially willing to go through areas with potential collapse hazards. They should also be capable enough to inspect structural elements for signs of damage.",
+                "o_succ":       "{name} successfully assisted you in assessing the risk of collapse in the {room}.",
+                "o_comp":       "{name} couldn't help you because they are not familiar with visually assessing signs of damage.",
+                "o_reli":       "{name} made a mistake and failed to notice a crack in the load-bearing wall of the {room}.",
+                "o_will":       "{name} was overwhelmed by the fear of a potential collapse and gave up.",
+                "vars": {
+                    "room":  [
+                        "building entrance",
+                        "roof access",
+                        "elevator shaft",
+                        "stairwell"
+                    ]
+                },
+                "prop": {
+                    "competence" :      2,
+                    "reliability" :     1,
+                    "willingness" :     4
+                }
+            },
+            {
+                "name":         "meds",
+                "descr_1":      "Provide first aid to civilians on the {floor} floor injured by the fire.",
+                "descr_2":      "Provide first aid to civilians on the {floor} floor injured by the fire. You will need assistance with applying bandages and controlling bleeding.",
+                "descr_3":      "Provide first aid to civilians on the {floor} floor injured by the fire. Your teammate must be especially reliable to perform first aid procedures as quickly as possible. They should also be capable enough to assess the severity of injuries.",
+                "o_succ":       "{name} successfully assisted you in providing first aid to all civilians on the {floor} floor.",
+                "o_comp":       "{name} couldn't help you because they are not trained in assessing the severity of injuries.",
+                "o_reli":       "{name} made a mistake and didn't perform the procedure quickly enough to save the civilian.",
+                "o_will":       "{name} was overwhelmed by the sheer amount of blood and gave up.",
+
+                "vars": {
+                    "floor":  [
+                        "first",
+                        "second",
+                        "fourth",
+                        "sixth",
+                        "ninth"
+                    ]
+                },
+                "prop": {
+                    "competence" :      2,
+                    "reliability" :     4,
+                    "willingness" :     1
+                }
+            },
+            {
+                "name":         "evac",
+                "descr_1":      "Coordinate the evacuation of all civilians from the building using the {direction} emergency exit.",
+                "descr_2":      "Coordinate the evacuation of all civilians from the building using the {direction} emergency exit. You will need assistance in planning the escape route and guiding the civilians.",
+                "descr_3":      "Coordinate the evacuation of all civilians from the building using the {direction} emergency exit. Your teammate must be especially capable of managing large groups of people under pressure. They should also be willing enough to stay behind to ensure no one is left behind.",
+                "o_succ":       "{name} successfully assisted you in coordinating the evacuation through the {direction} emergency exit.",
+                "o_comp":       "{name} couldn't help you because they are not trained in evacuation procedures for a group this large.",
+                "o_reli":       "{name} made a mistake and failed to account for all civilians.",
+                "o_will":       "{name} was overwhelmed by the fear of being left alone in the building and gave up.",
+                "vars": {
+                    "direction":  [
+                        "southwest",
+                        "northeast",
+                        "northwest",
+                        "west",
+                        "south"
+                    ]
+                },
+                "prop": {
+                    "competence" :      4,
+                    "reliability" :     1,
+                    "willingness" :     2
+                }
+            },
+            {
+                "name":         "hzrd",
+                "descr_1":      "Secure and neutralize a chemical spill in the {room} of the building.",
+                "descr_2":      "Secure and neutralize a chemical spill in the {room} of the building. You will need assistance with decontaminating the area and using the appropriate equipment.",
+                "descr_3":      "Secure and neutralize a chemical spill in the {room} of the building. Your teammate must be especially capable of handling hazardous materials. They should also be reliable enough to ensure that all affected surfaces are thoroughly cleaned.",
+                "o_succ":       "{name} successfully assisted you in securing and neutralize the chemical spill in the {room}.",
+                "o_comp":       "{name} couldn't help you because they are not trained to handle hazardous materials.",
+                "o_reli":       "{name} made a mistake and missed cleaning some contaminated surfaces in the {room}.",
+                "o_will":       "{name} was overwhelmed by the strong chemical fumes and gave up.",
+                "vars": {
+                    "room":  [
+                        "basement",
+                        "garage",
+                        "shipping area",
+                        "maintenance room"
+                    ]
+                },
+                "prop": {
+                    "competence" :      4,
+                    "reliability" :     2,
+                    "willingness" :     1
+                }
+            }
+        ]
+    }
+]
