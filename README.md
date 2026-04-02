@@ -1,4 +1,4 @@
-# Visual Misinformation in Vision-Language Models
+# Propensity to Trust in LLMs
 
 This repository contains the code and dataset for the paper *"Propensity to Trust in Large Language Models"*.
 
